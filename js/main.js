@@ -55,20 +55,23 @@ if (isNaN(numberToCheck)) {
     console.log("Task 5");
   
     function isPowerOfThree(num) {
-        for (let i = 0; i <= num; i++) {
-          if (Math.pow(3, i) === num) {
-            return true;
-          } else if (Math.pow(3, i) > num) {
-            return false;
-          }
-        }
-        return false;
-      }
-      
-      let num = prompt("Enter a number:");
-      if (isPowerOfThree(num)) {
-        console.log(num + " в степень ДА");
-      } else {
-        console.log(num + " в степень НЕТ");
-      }
-      
+		for (let i = 0; i <= num; i++) {
+		  if (Math.pow(3, i) === num) {
+			 return true;
+		  } else if (Math.pow(3, i) > num) {
+			 return false;
+		  }
+		}
+		return false;
+	 }
+	 
+	 let num = prompt("Enter a number:");
+	 num = Number(num);
+	 if (isNaN(num)) { 
+		console.log("Ваши данные не корректны - введите число");
+	 } else if (isPowerOfThree(num)) {
+		console.log(num + " в степень ДА");
+	 } else {
+		console.log(num + " в степень НЕТ");
+	 }
+	 
